@@ -33,3 +33,4 @@ Dentro de `index.html`:
 - Espera antes de revelar mensaje: `MESSAGE_DELAY = 6000`.
 - Posición/tamaño de la pantalla: clase `.screen` en CSS.
 - Tamaño del texto: variable CSS `--msg-font` en `.screen`.
+Deploy refresh.
