@@ -23,7 +23,7 @@ function typeLines(lines,el,done){el.innerHTML="";let li=0;function nextLine(){i
 async function playAudio(){try{if(audio.readyState<1){await new Promise(resolve=>{audio.addEventListener("loadedmetadata",resolve,{once:true});setTimeout(resolve,1500)})}try{audio.currentTime=AUDIO_START_TIME}catch(e){}await audio.play();if(audio.currentTime<AUDIO_START_TIME-1){try{audio.currentTime=AUDIO_START_TIME}catch(e){}}}catch(error){console.warn("Audio no disponible, la animación continúa.",error);showAudioNote()}}
 function showAudioNote(){audioNote.classList.add("show");audioNote.onclick=async()=>{try{audio.currentTime=AUDIO_START_TIME;await audio.play();audioNote.classList.remove("show")}catch(e){}};setTimeout(()=>audioNote.classList.remove("show"),6000)}
 function startExperience(){startBtn.disabled=true;intro.classList.add("hide");playAudio();screenEl.classList.add("on","waiting");screenGlow.classList.add("active");sparklesBox.classList.add("active");setTimeout(revealMessage,MESSAGE_DELAY)}
-function revealMessage(){screenEl.classList.remove("waiting");screenEl.classList.add("revealed");typeLines(SCREEN_LINES,msgbody,()=>setTimeout(()=>screenEl.classList.add("fadeout"),850))}
+function revealMessage(){screenEl.classList.remove("waiting");screenEl.classList.add("revealed");typeLines(SCREEN_LINES,msgbody)}
 startBtn.addEventListener("click",startExperience);
 </script>
 </body>
