@@ -71,23 +71,19 @@ body {
 
 /* ============================================================
    LCD DEL CELULAR — AJUSTE FINAL
-   Si necesitas moverlo:
-   - top baja/sube la pantalla
-   - left mueve horizontal
-   - width/height ajustan tamaño
    ============================================================ */
 
 .screen {
   --screen-rot: -7deg;
-  --msg-font: clamp(8px, 17.2cqw, 16px);
+  --msg-font: clamp(8px, 16.2cqw, 16px);
 
   position: absolute;
 
   /* Coordenadas corregidas */
-  left: 15.85%;
-  top: 53.15%;
-  width: 16%;
-  height: 16%;
+  left: 18.05%;
+  top: 52.95%;
+  width: 16.45%;
+  height: 13.10%;
 
   border-radius: 5px;
   overflow: hidden;
@@ -307,16 +303,19 @@ body {
 }
 
 .env-big {
-  font-size: clamp(12px, 15.5cqw, 28px);
+  font-size: clamp(11px, 13.2cqw, 24px);
   color: #ff3ea0;
   text-shadow: 0 0 5cqw rgba(255, 62, 160, 0.6);
   line-height: 1;
 }
 
 .notif-text {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
   font-weight: 900;
-  font-size: clamp(9px, 12.2cqw, 20px);
-  letter-spacing: -0.45cqw;
+  font-size: clamp(8px, 8.8cqw, 16px);
+  letter-spacing: -0.15cqw;
 }
 
 .dots::after {
@@ -339,10 +338,10 @@ body {
 /* Glow alrededor del LCD */
 .screen-glow {
   position: absolute;
-  left: 15.10%;
-  top: 52.60%;
-  width: 16.80%;
-  height: 14.10%;
+  left: 17.45%;
+  top: 52.35%;
+  width: 17.65%;
+  height: 14.20%;
   border-radius: 10px;
   pointer-events: none;
   opacity: 0;
